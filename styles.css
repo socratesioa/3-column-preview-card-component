@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+html,
+body {
+    background-color: var(--very-light-gray);
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    display: grid;
+    min-height: 100%;
+    place-content: center;
+}
+
+h1 {
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+p {
+    color: var(--transparent-white);
+    line-height: 25px;
+    margin-bottom: 83px;
+    max-width: 30rem;
+}
+
+.primary-btn {
+    background-color: var(--transparent-white);
+    width: 146px;
+    height: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.primary-btn:hover {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 920px;
+    width: 100%;
+}
+
+.card {
+    padding: 48px;
+}
+
+/* Card Variations */
+.bright-orange {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.dark-cyan {
+    background-color: var(--dark-cyan);
+}
+
+.very-dark-cyan {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Button Variations */
+
+.btn-bright-orange {
+    color: var(--bright-orange);
+}
+
+.btn-dark-cyan {
+    color: var(--dark-cyan);
+}
+
+.btn-very-dark-cyan {
+    color: var(--very-dark-cyan);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bright-orange {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+    }
+
+    .very-dark-cyan {
+        background-color: var(--very-dark-cyan);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+}
